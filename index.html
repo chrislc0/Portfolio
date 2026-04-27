@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portifolio">
+    <meta name="keywords" content="curriculo">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <meta name="author" content="Christopher">
+    <title>Portfólio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            
+        }
+
+        /* MENU LATERAL */
+        nav {
+            width: 300px;
+            height: 100vh;
+            background: rgba(72, 38, 85, 0.788);
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* centraliza */
+            padding-top: 20px;
+            position: fixed;
+        }
+
+        /* FOTO */
+        .foto {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #914ae2;
+            margin-bottom: 10px;
+        }
+
+        nav h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            font-size: 19px;
+        }
+
+        nav button:hover {
+            background: #4a90e2;
+        }
+
+        /* CONTEÚDO */
+        .conteudo {
+            margin-left: 300px;
+            padding: 20px;
+            width: 100%;
+            background: #eef5f2;
+            min-height: 100vh;
+        }
+
+        section {
+            display: none;
+            background: #705994b7;
+            padding: 20px;
+            border-radius: 50px;
+            max-width: 800px;
+        }
+
+        .ativa {
+            display: block;
+        }
+
+        
+    </style>
+</head>
+
+<body background="imagens/plano.de.fundo.png">
+
+<nav>
+
+    <!-- FOTO AQUI -->
+    <img src="imagens/images.bre.jpg" alt="Minha foto" class="foto">
+<h3>Curriculo e
+    Portifolio</h3>
+
+    <h2>Menu</h2>
+
+   
+   
+    <button onclick="mostrar('sobre')">Sobre</button>
+    <button onclick="mostrar('projetos')">Projetos</button>
+    <button onclick="mostrar('habilidades')">Habilidades</button>
+    <button onclick="mostrar('contato')">Contato</button>
+</nav>
+
+<div class="conteudo">
+    <h1>Christopher Lucas dos Santos costa</h1>
+    <p>Desenvolvedor Front-End</p>
+
+    <section id="sobre" class="ativa">
+        <h2>Sobre mim</h2>
+        <p>Sou estudante de tecnologia aprendendo desenvolvimento web, em busca de emprego, brasileiro solteiro  </p>
+    </section>
+
+    <section id="projetos">
+        <h2>Projetos</h2>
+        <p>Projeto 1 - Site simples</p>
+        <p>Projeto 2 - Página de login</p>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+           
+            <li> wab desing - Front-end (HTMl5, CSS3 e Javascrip) - 400h</li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Email: chrislc0@proton.me</p>
+    </section>
+</div>
+
+<script>
+    function mostrar(secao) {
+        const secoes = document.querySelectorAll("section");
+        secoes.forEach(s => s.classList.remove("ativa"));
+
+        document.getElementById(secao).classList.add("ativa");
+    }
+</script>
+
+</body>
+</html>
